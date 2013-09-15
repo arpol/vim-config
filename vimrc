@@ -18,11 +18,23 @@ autocmd FileType octave let b:match_words = '\<if\>\|\<while\>\|\<for\>\|\<switc
 "from http://design.liberta.co.za/articles/customizing-disabling-vim-matching-parenthesis-highlighting/
 hi MatchParen cterm=underline ctermbg=none ctermfg=none 
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.config/vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'godlygeek/csapprox'
 
-filetype plugin indent on  
+filetype plugin indent on 
+
+syntax enable
+
+set background=light
+let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
